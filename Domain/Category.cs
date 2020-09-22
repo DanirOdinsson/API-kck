@@ -1,8 +1,7 @@
 namespace Domain
 {
-    public class Category
+    public class Category : BaseDomain
     {
-        public int CategoryId { get; set; }
-        public string type { get; set; }
+                public string type { get; set; }
     }
 }

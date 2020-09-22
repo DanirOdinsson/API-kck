@@ -1,8 +1,7 @@
 namespace Domain
 {
-    public class Orders
+    public class Orders : BaseDomain
     {
-        public int OrderId { get; set; }
         public int CustomerId { get; set; }
         public string OrderDate { get; set; }
 

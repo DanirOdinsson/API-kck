@@ -1,8 +1,7 @@
 namespace Domain
 {
-    public class Image
+    public class Image : BaseDomain
     {
-        public int ImageId { get; set; }
         public string Name { get; set; } // Hvorfor denne her?
         public int ProductId { get; set; }
     }
