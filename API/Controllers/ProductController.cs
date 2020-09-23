@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Domain;
+using Data;
 //using API.Services.ProductService;
 
 namespace API.Controllers
@@ -14,7 +15,7 @@ namespace API.Controllers
     {
         private static List<Product> products = new List<Product> {
             new Product(),
-            new Product { Id =1 , Title = "Kilde blå"}
+            new Product { Id = 1 , Title = "Kilde blå"}
         };
         [HttpGet("GetAll")]
         public IActionResult Get()
@@ -23,7 +24,7 @@ namespace API.Controllers
         }
  
         [HttpGet("(id)")]
-        public IActionReult GetSingle(int id)
+        public IActionResult GetSingle(int id)
         {
             return Ok(products.FirstOrDefault(c => c.Id == id));
         }
