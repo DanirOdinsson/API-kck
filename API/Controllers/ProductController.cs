@@ -10,20 +10,20 @@ namespace API.Controllers
 {
 
     [ApiController]
-    [Route("API[controller]")]
+    [Route("API/[controller]")]
     public class ProductController : ControllerBase
     {
         private static List<Product> products = new List<Product> {
             new Product(),
             new Product { Id = 1 , Title = "Kilde blå"}
         };
-        [HttpGet("GetAll")]
+        [HttpGet]
         public IActionResult Get()
         {
             return Ok(products);
         }
  
-        [HttpGet("(id)")]
+        [HttpGet("{id}")]
         public IActionResult GetSingle(int id)
         {
             return Ok(products.FirstOrDefault(c => c.Id == id));
