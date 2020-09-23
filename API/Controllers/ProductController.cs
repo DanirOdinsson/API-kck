@@ -9,7 +9,7 @@ namespace API.Controllers
 {
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("API[controller]")]
     public class ProductController : ControllerBase
     {
         private static List<Product> products = new List<Product> {
