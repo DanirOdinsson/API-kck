@@ -1,7 +1,9 @@
 namespace Domain
 {
-    public class Category : BaseDomain
+    public enum Category
     {
-                public string type { get; set; }
+        Shirts = 1,
+        Shoes = 2,
+        Jeans = 3
     }
 }
